@@ -8,7 +8,7 @@ const forecast = (latitude,longitude,callback) => {  //FORECAST function
         } else if(body.error){
             callback('Error in location',undefined)
         } else{
-            callback(undefined, body.daily.data[1].summary + ' it is Currently ' + body.currently.temperature + ' degrees out. ' + 'There is a ' + body.currently.precipProbability+'%' + ' chance of rain.')
+            callback(undefined, body.daily.data[1].summary + ' it is Currently ' + body.currently.temperature + ' degrees out. ' +'highest temperature of day: ' + body.daily.data[1].temperatureHigh +' lowest temperature of the day: ' + body.daily.data[1].temperatureLow + '.' + 'There is a ' + body.currently.precipProbability+'%' + ' chance of rain.')
         }
     })
 }
