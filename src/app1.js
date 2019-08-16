@@ -1,7 +1,9 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
+
 const app = express()
+const port = process.env.PORT || 5000
 const geocode = require('./geocodepath/geocode')
 const forecast = require('./geocodepath/forecast')
 
@@ -90,6 +92,6 @@ app.get('*',(req,res) =>{
     })
 })
 
-app.listen(5000, () =>{//providing a localhost for file running
-    console.log('server running 5000')
+app.listen(port, () =>{//providing a localhost for file running
+    console.log('server running port' + port)
 })
