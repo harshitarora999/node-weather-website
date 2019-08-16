@@ -33,7 +33,7 @@ app.get('',(req,res)=>{//to provide attributes of hbs value to app
 app.get('/about',(req,res)=>{
     res.render('about',{
         title: 'ITS BENZ',
-        name: 'About BENZ',
+        name: 'About Benz',
         bottom: 'Created By Harshit Arora'
     })
 })
