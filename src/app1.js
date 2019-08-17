@@ -48,14 +48,6 @@ app.get('/weather',(req,res)=>{
         if (error) {
             return res.send({error})
         } else{
-            timecode(latitude,longitude,(error,data1) => { //forecast calling
-                if (error) {
-                    return res.send({error})
-                }
-                res.send({
-                    timecode: data1
-                })
-            })
             forecast(latitude,longitude, (error,data2) => { //forecast calling
                 if (error) {
                     return res.send({error})
