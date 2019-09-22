@@ -44,7 +44,7 @@ app.get('/weather',(req,res)=>{
             error: 'Please Provide an Address'
         })
     }
-    geocode(req.query.address,(error,{latitude,longitude,location} = {}) => { //geocode calling //empty '{}' is provided to run the code even if address is empty
+    geocode(req.query.address,(error,{latitude,longitude,location} = {}) => { //geocode calling || empty '{}' is provided to run the code even if address is empty
         if (error) {
             return res.send({error})
         } else{
